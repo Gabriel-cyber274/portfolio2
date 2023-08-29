@@ -1,4 +1,9 @@
-.App {
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Recoleta:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Montserrat:wght@300&family=Source+Code+Pro&display=swap');
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +40,400 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.first_head {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(#D9D9D9, #D9D9D900);
+}
+.navH {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.design1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 46%;
+}
+.design2 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+.design3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 46%;
+}
+.design4 {
+  height: 100vh;
+  width: 100%;
+}
+.groupD {
+  position: absolute;
+  bottom: 23px;
+  left: 20%;
+}
+.design5 {
+  position: absolute;
+  bottom: -22px;
+  left: 66%;
+}
+.design6 {    
+  /* position: absolute; */
+  /* bottom: 20px;
+  left: 13%; */
+}
+.design7 {
+  position: absolute;
+  top: 37%;
+  left: 12%;
+}
+.design8 {
+  position: absolute;
+  top: 57%;
+  right: 22%;
+}
+.centerN {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 68vh;
+  z-index: 1;
+  bottom: 0;
+}
+.centerN h1 {
+  color: #FFF;
+  text-shadow: 8px 9px 16px rgba(0, 0, 0, 0.25);
+  font-family: Montserrat Subrayada;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.second-sec {
+  /* height: 100vh; */
+  padding: 150px 0px;
+}
+.navH button {
+  border: 1px solid #FFB703;
+  background: transparent;
+  color: #023047;
+  font-size: 24px;
+  font-family: Montserrat;
+  font-weight: 600;
+  background-image: linear-gradient(white, #8ECAE6);
+}
+.navH h2 {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.second-sec .first h1 {
+  color: #023047;
+  font-family: Source Code Pro;
+  font-size: 56px;
+  font-style: normal;
+  margin-bottom: 30px;
+  font-weight: 600;
+  line-height: normal;
+}
+.second-sec .first p {
+  color: #3A3A3A;
+  font-family: Source Code Pro;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.second-sec .first {
+  width: 55%;
+  padding: 0 50px;
+}
+.second-sec .second {
+  width: 45%;
+}
+.myPic {
+  /* position: absolute;
+  left: 78px;
+  height: 642px; */
+  /* width: 410px; */
+  /* top: -43px; */
+  margin-left: -185px;
+}
+body {
+  overflow-x: hidden;
+}
+.designS {
+  height: 592px;
+  position: absolute;
+  z-index: -1;
+  left: 107px;
+  top: 78px;
+}
+.fP {
+  width: 694px;
+}
+.side_color {
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  background: #219EBC;
+  /* position: relative; */
+  /* position: absolute;
+  right: 0; */
+  height: 799px;
+  width: 60%;
+  /* top: 0; */
+}
+.htmlL{
+  position: absolute;
+  top: 90px;
+  left: 50%;
+}
+.jsL {
+  position: absolute;
+  bottom: 6%;
+  right: 30%;
+}
+.third-sec {
+  padding: 20px 0 150px 0;
+}
+.third-sec h1 {
+  color: #023047;
+  font-family: Source Code Pro;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.third-sec p {
+  color: #3A3A3A;
+  font-family: Source Code Pro;
+  font-size: 32px;
+  font-style: normal;
+  padding-right: 40px;
+  font-weight: 400;
+  line-height: normal;
+}
+.third-sec .cont {
+  width: 100%;
+  padding: 0 6%;
+}
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 53px;
+  margin-right: 40px;
+}
+.skill {
+  border-radius: 24px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.44);
+  width: 280px;
+  height: 203px;
+  display: grid;
+  place-items: center;
+  background-image: linear-gradient(#023047, #219EBC, #FB8500);
+}
+.skill .inner {
+  width: 96%;
+  border-radius: 24px;
+  height: 94%;
+  background-color: white;
+}
+.third-sec h3 {
+  position: absolute;
+  bottom: -46px;
+  color: #3A3A3A;
+  font-family: Source Code Pro;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.thirdD {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  top: -37px;
+}
+.vueD {
+  position: absolute;
+  bottom: 20%;
+  right: 2%;
+}
+.projects button {
+  position: absolute;
+  bottom: -162px;
+  left: 0;
+  width: 200px;
+  height: 48px;
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: #023047;
+  color: white;
+}
+.projects h3 {
+  bottom: -92px;
+  width: 100%;
+}
+.projects .project {
+  width: 356px;
+  height: 254.89px;
+}
+.projects .inner {
+  background-image: url('../public/assets/Frame\ 4.png');
+}
+.projects {
+  grid-row-gap: 210px !important;
+}
+.fourth-sec {
+  margin-bottom: 150px;
+}
+.fourthI {
+  position: absolute;
+  bottom: -134px;
+  right: 9%;
+}
+.reactI {
+  position: absolute;
+  top: 38%;
+  transform: rotate(116deg);
+  left: 2%;
+}
+.line {
+  position: absolute;
+  width: 100%;
+  bottom: -102px;
+}
+.designPro {
+  position: absolute;
+  right: 0;
+}
+.laravelP {
+  position: absolute;
+  right: 3%;
+  top: 9%;
+}
+.fifth-sec h1 {
+  font-size: 40px;
+}
+.football {
+  background-color: #FB8500;
+}
+.hobby {
+  width: 280px;
+  height: 176px;
+  border-radius: 14px;
+}
+.hobbies h4 {
+  font-family: Source Code Pro;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0em;
+  color: white;
+}
+.hobbies h5 {
+  font-family: Source Code Pro;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.shadowB {
+  bottom: -10px;
+  left: 41px;
+}
+.game {
+  background-color: #219EBC;
+}
+.sixth-sec .mainCont {
+  width: 100%;
+  /* height: 740px; */
+  border-radius: 29px;
+  border: 5.95px solid transparent; 
+  background: linear-gradient(158.01deg, #023047 1.61%, #219EBC 49.1%, #FB8500 100%) border-box; 
+  /* -webkit-mask:
+     linear-gradient(#fff 0 0) padding-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; 
+  mask-composite: exclude; */
+}
+.mainCont2 {
+  background-color: white;
+  width: 100%;
+  border-radius: 29px;
+  /* height: 98%;  */
+  padding: 63px 0;
+}
+.mainCont3 {
+  width: 92%;
+}
+.collab {
+  cursor: pointer;
+}
+.collab h5 {
+  font-family: Source Code Pro;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 65px;
+  letter-spacing: 0em;
+}
+.collab .first {
+  border-bottom: 2px solid #3a3a3a7d;
+}
+.cssP {
+  position: absolute;
+  right: 4%;
+  top: -39px;
+}
+.collabEx {
+  text-align: end;
+  width: 76%;
+  margin-left: auto;
+}
+.collabEx p {
+  font-family: Source Code Pro;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  padding-right: 0 !important;
+}
+.collabEx button {
+  border-radius: 28.573169708251953px;
+  border: 5.952744007110596px;
+  font-family: Source Code Pro;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.diffBut {
+  width: 400px;
+  height: 80px;
+}
+.footerN {
+  font-family: Source Code Pro;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0em;
+}
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.sixth-sec {
+  padding: 20px 0 20px 0;
 }
