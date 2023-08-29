@@ -1,10 +1,26 @@
 import React, { useState } from 'react'
 import Nav from '../components/Nav'
+import { toast } from 'react-toastify';
 
 function Home() {
     const [showCollab, setShowCollab] = useState(false);
     const [showPro, setShowPro] = useState(false);
 
+    
+  const notify_err = (res) => toast.error(res, { theme: "colored" });
+  const notify = (res)=> {
+    toast.success(res, { theme: "colored" })
+  } 
+    
+  const copyText = (text)=> {
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        notify('Link copied to clipboard');
+      })
+      .catch((error) => {
+        console.error('Error copying text:', error);
+      });
+  }
   return (
     <div>
         <div className='first_head position-relative'>
@@ -604,7 +620,7 @@ function Home() {
                         </div>
                         
                         <h3>MOVIE SITE <br /> (PERSONAL PROJECT)</h3>
-                        
+
                         <button>
                             <a href="https://gabriels-moviesite.netlify.app/" target='_blank'>
                                 VISIT SITE <svg className='ms-2' width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -679,11 +695,11 @@ function Home() {
                             <div className='collab'>
                                 <div className='first py-5'>
                                     <div onClick={()=> {setShowCollab(!showCollab); setShowPro(false)}} className='d-flex justify-content-between align-items-center'>
-                                        {!showCollab && <svg width="73" height="70" viewBox="0 0 73 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        {!showCollab && <svg style={{cursor: 'pointer'}} width="73" height="70" viewBox="0 0 73 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9476 3.83735C14.4446 1.43475 16.7952 -0.110056 19.1978 0.386928L69.3133 10.7534C71.7159 11.2504 73.2607 13.601 72.7637 16.0036L62.3971 66.1189C61.9002 68.5215 59.5496 70.0663 57.147 69.5693C54.7444 69.0723 53.1996 66.7217 53.6966 64.3191L61.8906 24.7064L60.6982 25.49L49.8466 21.99L57.011 17.2815L17.3981 9.08751C14.9955 8.59053 13.4507 6.23995 13.9476 3.83735ZM53.8913 29.5062L59.8442 26.0513L39.2419 39.5911L28.9936 35.6945L32.297 33.5236L42.2477 37.0556L49.1272 33.0628L38.3079 29.5732L43.8391 25.9381L53.8913 29.5062ZM32.6266 43.6847L35.933 41.7657L28.5549 46.6146L18.3066 42.718L22.9319 39.6783L32.6266 43.6847ZM12.2631 46.6898L2.9715 52.7963C0.921175 54.1437 0.3514 56.8982 1.69887 58.9485C3.04634 60.9988 5.80079 61.5686 7.85111 60.2211L22.195 50.7943L12.2631 46.6898Z" fill="#219EBC"/>
                                         </svg>}
 
-                                        {showCollab && <svg width="73" height="70" viewBox="0 0 73 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        {showCollab && <svg style={{cursor: 'pointer'}} width="73" height="70" viewBox="0 0 73 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4477 66.4288C13.9447 68.8314 16.2953 70.3762 18.6979 69.8792L68.8134 59.5127C71.216 59.0157 72.7608 56.6651 72.2638 54.2625L61.8972 4.14722C61.4002 1.74462 59.0497 0.199814 56.6471 0.6968C54.2445 1.19379 52.6997 3.54436 53.1966 5.94697L61.3907 45.5597L60.1983 44.7761L49.3467 48.2761L56.5111 52.9846L16.8982 61.1786C14.4956 61.6756 12.9508 64.0262 13.4477 66.4288ZM53.3914 40.7599L59.3442 44.2148L38.742 30.675L28.4937 34.5716L31.7971 36.7426L41.7477 33.2106L48.6273 37.2033L37.808 40.6929L43.3392 44.328L53.3914 40.7599ZM32.1267 26.5814L35.4331 28.5004L28.055 23.6515L17.8067 27.5481L22.432 30.5878L32.1267 26.5814ZM11.7632 23.5763L2.47159 17.4698C0.421267 16.1224 -0.148508 13.3679 1.19896 11.3176C2.54643 9.26728 5.30088 8.69751 7.3512 10.045L21.6951 19.4718L11.7632 23.5763Z" fill="#219EBC"/>
                                         </svg>}
 
@@ -693,7 +709,7 @@ function Home() {
                                     {showCollab && <div className='collabEx'>
                                         <p>Whether you're a UI/UX designer or a fellow developer interested in collaborating on a project, 
                                                     don't hesitate to reach out and tell me all about it via mail below.</p>
-                                        <button className='my-3 px-5 py-2'>
+                                        <button className='my-3 px-5 py-2' onClick={()=> copyText('Imohgabriel@gmail.com')}>
                                             <img src="/assets/mail.png" alt="" />
                                             Imohgabriel@gmail.com
                                         </button>
@@ -786,12 +802,12 @@ function Home() {
 
                                 <div className='py-5'>
                                     <div onClick={()=> {setShowPro(!showPro); setShowCollab(false)}} className='d-flex justify-content-between align-items-center'>
-                                        {!showPro && <svg width="73" height="70" viewBox="0 0 73 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        {!showPro && <svg style={{cursor: 'pointer'}} width="73" height="70" viewBox="0 0 73 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9476 3.83735C14.4446 1.43475 16.7952 -0.110056 19.1978 0.386928L69.3133 10.7534C71.7159 11.2504 73.2607 13.601 72.7637 16.0036L62.3971 66.1189C61.9002 68.5215 59.5496 70.0663 57.147 69.5693C54.7444 69.0723 53.1996 66.7217 53.6966 64.3191L61.8906 24.7064L60.6982 25.49L49.8466 21.99L57.011 17.2815L17.3981 9.08751C14.9955 8.59053 13.4507 6.23995 13.9476 3.83735ZM53.8913 29.5062L59.8442 26.0513L39.2419 39.5911L28.9936 35.6945L32.297 33.5236L42.2477 37.0556L49.1272 33.0628L38.3079 29.5732L43.8391 25.9381L53.8913 29.5062ZM32.6266 43.6847L35.933 41.7657L28.5549 46.6146L18.3066 42.718L22.9319 39.6783L32.6266 43.6847ZM12.2631 46.6898L2.9715 52.7963C0.921175 54.1437 0.3514 56.8982 1.69887 58.9485C3.04634 60.9988 5.80079 61.5686 7.85111 60.2211L22.195 50.7943L12.2631 46.6898Z" fill="#219EBC"/>
                                         </svg>}
 
                                         
-                                        {showPro && <svg width="73" height="70" viewBox="0 0 73 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        {showPro && <svg style={{cursor: 'pointer'}} width="73" height="70" viewBox="0 0 73 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4477 66.4288C13.9447 68.8314 16.2953 70.3762 18.6979 69.8792L68.8134 59.5127C71.216 59.0157 72.7608 56.6651 72.2638 54.2625L61.8972 4.14722C61.4002 1.74462 59.0497 0.199814 56.6471 0.6968C54.2445 1.19379 52.6997 3.54436 53.1966 5.94697L61.3907 45.5597L60.1983 44.7761L49.3467 48.2761L56.5111 52.9846L16.8982 61.1786C14.4956 61.6756 12.9508 64.0262 13.4477 66.4288ZM53.3914 40.7599L59.3442 44.2148L38.742 30.675L28.4937 34.5716L31.7971 36.7426L41.7477 33.2106L48.6273 37.2033L37.808 40.6929L43.3392 44.328L53.3914 40.7599ZM32.1267 26.5814L35.4331 28.5004L28.055 23.6515L17.8067 27.5481L22.432 30.5878L32.1267 26.5814ZM11.7632 23.5763L2.47159 17.4698C0.421267 16.1224 -0.148508 13.3679 1.19896 11.3176C2.54643 9.26728 5.30088 8.69751 7.3512 10.045L21.6951 19.4718L11.7632 23.5763Z" fill="#219EBC"/>
                                         </svg>}
                                         <h5>Hire me for Projects</h5>
@@ -806,11 +822,11 @@ function Home() {
                                             through any of the following channels:</p>
                                         
                                         <div className='d-flex justify-content-end align-items-center'>
-                                            <button className='my-3 me-4 diffBut justify-content-center d-flex align-items-center'>
+                                            <button onClick={()=>copyText('Imohgabriel@gmail.com')} className='my-3 me-4 diffBut justify-content-center d-flex align-items-center'>
                                                 <img className='me-3' src="/assets/mail.png" alt="" />
                                                 Imohgabriel@gmail.com
                                             </button>
-                                            <button className='my-3 diffBut justify-content-center d-flex align-items-center'>
+                                            <button onClick={()=> copyText('+234 701 852 1912')} className='my-3 diffBut justify-content-center d-flex align-items-center'>
                                                 <img className='me-3' src="/assets/phone.png" alt="" />
                                                 +234 701 852 1912
                                             </button>

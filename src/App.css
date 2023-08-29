@@ -379,7 +379,7 @@ body {
   width: 92%;
 }
 .collab {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .collab h5 {
   font-family: Source Code Pro;
